@@ -1,0 +1,8 @@
+.users-button{
+ font-size: 18px;
+ padding: 20px 40px;
+ border: none;
+ border-radius: 10px;
+ background-color:hsl(0, 3%, 23%) ;
+ cursor: pointer;
+}
