@@ -21,7 +21,7 @@ function Otp() {
   
    const verifyOtp = () =>{
     const otp = otpDigits.join('')
-    axios.post('http://localhost:3002/api/otp/verify' , {email,otp})
+    axios.post(`${process.env.REACT_APP_ENDPOINT}/api/otp/verify` , {email,otp})
     .then(res =>{
       saveUser();
       sendEmail();
@@ -38,14 +38,14 @@ function Otp() {
    }
 
     const saveUser =() =>{
-      axios.post('http://localhost:3002/api/regi/register',{email,name,password,confirmPassword})
+      axios.post(`${process.env.REACT_APP_ENDPOINT}/api/regi/register`,{email,name,password,confirmPassword})
       .then(res =>{
         console.log("save")
       } );
     }
   
      const sendEmail =() => {
-      axios.post('http://localhost:3002/api/mail/welcome',{email})
+      axios.post(`${process.env.REACT_APP_ENDPOINT}/api/mail/welcome`,{email})
        .then(res =>{
        console.log("send")
       } );

@@ -18,7 +18,7 @@ function Dashboard() {
 
   const getDelivery = () => {
     axios
-      .get(`http://localhost:3002/api/deli/delivery/${username}`)
+      .get(`${process.env.REACT_APP_ENDPOINT}/api/deli/delivery/${username}`)
       .then((res) => {
         setDeliveries(res.data);
       })

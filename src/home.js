@@ -7,7 +7,7 @@ const Home = () => {
 const navigate = useNavigate()
   return (
     <div className="pt-16">
-      {/* Hero Section */}
+    
       
 
       {/* Features Section */}

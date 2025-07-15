@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import axios from "axios";
 
+
 function Add() {
   const [customer, setCustomer] = useState("");
   const [address, setAddress] = useState("");
@@ -15,8 +16,8 @@ function Add() {
   const addDelivery = (e) => {
     e.preventDefault();
 
-    axios
-      .post("http://localhost:3002/api/deli/delivery", {
+   axios.post(`${process.env.REACT_APP_ENDPOINT}/api/deli/delivery`, {
+
          username: email,
         customer,
         address,

@@ -28,7 +28,7 @@ function Signup() {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:3002/api/otp/send",{
+      const response = await axios.post(`${process.env.REACT_APP_ENDPOINT}/api/otp/send`,{
         email,
         uname,
       });

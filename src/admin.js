@@ -9,7 +9,7 @@ useEffect(() => {
 
 
 const getAllDeliveries =()=>{
-    axios.get('http://localhost:3002/api/ad/admin')
+    axios.get(`${process.env.REACT_APP_ENDPOINT}/api/ad/admin`)
     .then(response =>{
         setDeliveries(response.data);
 
@@ -18,7 +18,7 @@ const getAllDeliveries =()=>{
     })
 }
 const handleStatusChange = (username, newStatus) => {
-  axios.put(`http://localhost:3002/api/ad/updatedel`, {
+  axios.put(`${process.env.REACT_APP_ENDPOINT}/api/ad/updatedel`, {
     username,
     status: newStatus
   })
