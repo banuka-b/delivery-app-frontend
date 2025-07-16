@@ -20,7 +20,7 @@ if(email=="admin" && password=="admin"){
   const fullEmail = email.includes("@") ? email : `${email}@gmail.com`;
      
   try {
-    const response = await axios.post("http://localhost:3002/api/regi/login", {
+    const response = await axios.post(`${process.env.REACT_APP_ENDPOINT}/api/regi/login`, {
       email: fullEmail,
       password,
     });
